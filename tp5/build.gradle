@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.9.3'
+}
+
+group 'fr.istic.vv'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    allureVersion = '2.20.1'
+    junitVersion = '5.9.1'
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation('com.codeborne:selenide:6.10.1')
+    testImplementation("io.qameta.allure:allure-selenide:${allureVersion}")
+    testImplementation('io.github.bonigarcia:webdrivermanager:5.3.1')
+    testImplementation('org.assertj:assertj-core:3.23.1')
+    testImplementation('org.hamcrest:hamcrest:2.2')
+    testImplementation('org.slf4j:slf4j-simple:1.7.30')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}
+
+test {
+    useJUnitPlatform()
+}
+allure {
+    autoconfigure = true
+    version = "${allureVersion}"
+
+    useJUnit5 {
+        version = "${allureVersion}"
+    }
+}
