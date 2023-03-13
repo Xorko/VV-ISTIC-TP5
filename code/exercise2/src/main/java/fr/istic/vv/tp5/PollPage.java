@@ -1,14 +1,3 @@
-## Page Object Model
-
-The image below shows the poll page of the [Simba Organizer](https://github.com/barais/doodlestudent/) application discussed in classes.
-
-![Simba Organizer Poll page](simba-poll-page.png)
-
-Write in this document the interface of a page object class for this page.
-
-## Answer
-
-```java
 package fr.istic.vv.tp5;
 
 
@@ -67,31 +56,29 @@ public class PollPage {
     public void setTableView() {
         driver.findElement(this.tableView).click();
     }
-    
+
     public void setDateOptionsCheckbox() {
         driver.findElement(this.dateOptionsCheckbox).click();
     }
-    
+
     public void setSubmitButton() {
         driver.findElement(this.submitButton).click();
     }
-    
+
     public void setAuthorComment(String authorComment) {
         driver.findElement(this.authorComment).sendKeys(authorComment);
     }
-    
+
     public void setCommentAuthor(String commentAuthor) {
         driver.findElement(this.commentAuthor).sendKeys(commentAuthor);
     }
-    
+
     public void setComment(String comment) {
         driver.findElement(this.comment).sendKeys(comment);
     }
-    
+
     public void submit() {
         driver.findElement(this.submitButton).click();
     }
 
 }
-
-```

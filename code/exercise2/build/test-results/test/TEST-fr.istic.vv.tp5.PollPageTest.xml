@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fr.istic.vv.tp5.PollPageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-13T20:59:21" hostname="DESKTOP-EIH7BAD" time="0.015">
+  <properties/>
+  <testcase name="test()" classname="fr.istic.vv.tp5.PollPageTest" time="0.015"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
