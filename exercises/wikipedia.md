@@ -12,3 +12,13 @@ The process is as follows:
 Include the code of the walker and the snapshot in this document.
 
 ## Answer
+
+The code of the walker is available in the file [WikipediaWalker.java](../code/exercise1/src/test/java/fr/istic/vv/tp5/WikipediaWalkerTest.java).
+To run it requires a jdk 17.
+
+We can see in the following snapshot that the walker has visited 10 different pages :
+
+![execution.png](../code/exercise1/execution.png)
+
+The snapshot is of the last page :
+![snapshot.png](../code/exercise1/snapshot.png).

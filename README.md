@@ -1,15 +1,12 @@
-# Validation and Verification: Practical Session
+# Validation and Verification: Practical Session #3
 
-This practical session will help to better understand GUI testing, and in particular the tool Selenium
+## Authors
 
-## Exercises
+AGOGUÉ Benoît
+Le GOFF Thibault
 
-You can access the exercises [here](sujet.md)
+## Answers
 
-## Lab implementation
-
-You can realize this lab by group of 1 or 2. 
-
-## Deliverable and evaluation
-
-Students are free to realize either this practical work or the [TP4](https://github.com/selabs-ur1/VV-TP4). We will mark the chosen lab. You need to fork this repository and to submit a pull request with the answers written in the dedicated sections (deadline March 17th 2023, 23:59).
+* [Exercise 1](./exercises/wikipedia.md)
+* [Exercise 2](./exercises/pmd-test-smells.md)
+* [Exercise 3](./exercises/balanced-strings.md)
