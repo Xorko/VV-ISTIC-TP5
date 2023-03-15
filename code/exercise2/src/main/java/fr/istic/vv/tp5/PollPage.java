@@ -17,8 +17,6 @@ public class PollPage {
 
     By icsFlowAccessibleButton = By.className("p-inputswitch-slider");
 
-    // Find button by its containing text
-
     By calendarView = By.xpath("//div[i[contains(text(), 'Vue Calendrier')]]");
 
     By calendarViewDateOptions = By.xpath("//div[@class='fc-event-time']");
