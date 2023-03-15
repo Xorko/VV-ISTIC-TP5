@@ -31,7 +31,6 @@ public class PollPage {
 
     By pollComment = By.id("commentdesc");
 
-    // get span containing the text "Ajouter un commentaire"
     By addCommentButton = By.xpath("//span[contains(text(), 'Ajouter commentaire')]");
 
     public void setName(String name) {
