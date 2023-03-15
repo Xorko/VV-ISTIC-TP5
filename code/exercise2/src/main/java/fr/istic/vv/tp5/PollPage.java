@@ -11,27 +11,30 @@ public class PollPage {
         this.driver = driver;
     }
 
-    By name = By.id("name");
+    By name = By.id("nom");
 
-    By email = By.id("email");
+    By email = By.id("mail");
 
-    By icsFlowAccessibleButton = By.id("icsFlow");
+    By icsFlowAccessibleButton = By.className("p-inputswitch-slider");
 
-    By culinaryPreference = By.id("foodPreference");
+    // Find button by its containing text
 
-    By calendarView = By.id("calendarView");
+    By calendarView = By.xpath("//div[i[contains(text(), 'Vue Calendrier')]]");
 
-    By tableView = By.id("tableView");
+    By calendarViewDateOptions = By.xpath("//div[@class='fc-event-time']");
 
-    By dateOptionsCheckbox = By.id("dateOptions");
+    By tableView = By.xpath("//div[i[contains(text(), 'Vue Tableau')]]");
 
-    By submitButton = By.id("submit");
+    By tableViewDateOptions = By.xpath("(//div[@class='p-checkbox-box'])[1]");
 
-    By authorComment = By.id("authorComment");
+    By submitButton = By.xpath("//span[contains(text(), 'Soumettre voeux')]");
 
-    By commentAuthor = By.id("commentAuthor");
+    By pollCommentAuthor = By.id("comment");
 
-    By comment = By.id("comment");
+    By pollComment = By.id("commentdesc");
+
+    // get span containing the text "Ajouter un commentaire"
+    By addCommentButton = By.xpath("//span[contains(text(), 'Ajouter commentaire')]");
 
     public void setName(String name) {
         driver.findElement(this.name).sendKeys(name);
@@ -41,44 +44,40 @@ public class PollPage {
         driver.findElement(this.email).sendKeys(email);
     }
 
-    public void setIcsFlowAccessibleButton() {
+    public void pressIcsFlowAccessibleButton() {
         driver.findElement(this.icsFlowAccessibleButton).click();
-    }
-
-    public void setCulinaryPreference() {
-        driver.findElement(this.culinaryPreference).click();
     }
 
     public void setCalendarView() {
         driver.findElement(this.calendarView).click();
     }
 
+    public void selectCalendarViewDateOptions() {
+        driver.findElement(this.calendarViewDateOptions).click();
+    }
+
     public void setTableView() {
         driver.findElement(this.tableView).click();
     }
 
-    public void setDateOptionsCheckbox() {
-        driver.findElement(this.dateOptionsCheckbox).click();
+    public void selectTableViewDateOptions() {
+        driver.findElement(this.tableViewDateOptions).click();
     }
 
-    public void setSubmitButton() {
+    public void pressSubmitButton() {
         driver.findElement(this.submitButton).click();
     }
 
-    public void setAuthorComment(String authorComment) {
-        driver.findElement(this.authorComment).sendKeys(authorComment);
+    public void setPollCommentAuthor(String pollCommentAuthor) {
+        driver.findElement(this.pollCommentAuthor).sendKeys(pollCommentAuthor);
     }
 
-    public void setCommentAuthor(String commentAuthor) {
-        driver.findElement(this.commentAuthor).sendKeys(commentAuthor);
+    public void setPollComment(String pollComment) {
+        driver.findElement(this.pollComment).sendKeys(pollComment);
     }
 
-    public void setComment(String comment) {
-        driver.findElement(this.comment).sendKeys(comment);
-    }
-
-    public void submit() {
-        driver.findElement(this.submitButton).click();
+    public void pressAddCommentButton() {
+        driver.findElement(this.addCommentButton).click();
     }
 
 }
