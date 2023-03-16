@@ -16,6 +16,8 @@ class PollPageTest {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver(option);
 
+        // The page must be created before starting the test
+        // Adapt the url to your needs
         driver.get("http://localhost/answer/qayGhL8nLL3W2U0FQBCXUQ8x");
 
         PollPage pollPage = new PollPage(driver);
