@@ -12,4 +12,8 @@ Include in this document the code of the test and, if you did it, the link to th
 
 ## Answer
 
+The bug we found was that on the creation of a poll, it is possible to access the second page of the creation without having filled the first page. This could be done by clicking on the second page button before filling the first page :
 
+![bug](bug_image_1.png)
+
+A test demonstrating this bug is available in the following file: [PollPageTest.java](../code/exercise3/src/test/java/fr/istic/vv/tp5/BugTest.java)
