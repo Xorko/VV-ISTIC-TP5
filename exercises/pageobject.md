@@ -2,7 +2,7 @@
 
 The image below shows the poll page of the [Simba Organizer](https://github.com/barais/doodlestudent/) application discussed in classes.
 
-![Simba Organizer Poll page](simba-poll-page.png)
+<img src="simba-poll-page.png" width="40%" >
 
 Write in this document the interface of a page object class for this page.
 
